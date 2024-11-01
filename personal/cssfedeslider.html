@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img-box {
+            width: 100%;
+            height: 46vw;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .img-box img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 10;
+            opacity: 0;
+            animation-name: fade;
+            animation-duration: 12s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 0;
+                transform: scale(1.1);
+            }
+
+            100% {
+                z-index: 0;
+                opacity: 0;
+            }
+        }
+
+        /* 1枚目のスライド */
+        .img-box img:first-of-type {
+            animation-delay: 0s;
+        }
+
+        /* 2枚目のスライド */
+        .img-box img:nth-of-type(2) {
+            animation-delay: 4s;
+        }
+
+        /* 3枚目のスライド */
+        .img-box img:last-of-type {
+            animation-delay: 8s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="img-box">
+        <img src="https://assets.codepen.io/8104566/img.jpg" alt="Slide 1">
+        <img src="https://assets.codepen.io/8104566/img2.jpg" alt="Slide 2">
+        <img src="https://assets.codepen.io/8104566/img3.jpg" alt="Slide 3">
+    </div>
+</body>
+
+</html>
