@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>合計計算フォームテスト</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- <section class="simulation">
+      <h2>Simulation</h2>
+      <div class="box">
+        <div class="right">
+          <h3>ログサウナカスタムアイテム</h3>
+          <section class="section-radio">
+            <h4>ログ形状</h4>
+            <div class="log">
+              <div class="radio" data-price="1000">丸ログ ¥1,000</div>
+              <div class="radio" data-price="2000">角ログ ¥2,000</div>
+            </div>
+          </section>
+          <section class="section-radio">
+            <h4>サイズ</h4>
+            <div class="size">
+              <div class="radio" data-price="3000">標準サイズ ¥3,000</div>
+              <div class="radio" data-price="4000">コンパクトサイズ ¥4,000</div>
+            </div>
+          </section>
+          <section class="section-radio">
+            <h4>ストーブ</h4>
+            <div class="stove">
+              <div class="radio" data-price="10000">
+                <div class="img">
+                  <img src="https://placehold.jp/100x130.png" alt="" />
+                </div>
+                <div class="text">
+                  <h5>電気ストーブ</h5>
+                  <p>テキストテキスト</p>
+                  <p>¥10,000</p>
+                </div>
+              </div>
+              <div class="radio" data-price="20000">
+                <div class="img">
+                  <img src="https://placehold.jp/100x130.png" alt="" />
+                </div>
+                <div class="text">
+                  <h5>薪ストーブ</h5>
+                  <p>テキストテキスト</p>
+                  <p>¥20,000</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section-check">
+            <h4>照明</h4>
+            <div class="lighting">
+              <div class="check" data-price="5000">照明01 ¥5,000</div>
+            </div>
+          </section>
+          <section class="section-check">
+            <h4>塗料</h4>
+            <div class="painting">
+              <div class="check" data-price="55000">塗料01 ¥55,000</div>
+              <div class="check" data-price="50000">塗料02 ¥50,000</div>
+              <div class="check" data-price="60000">塗料03 ¥60,000</div>
+            </div>
+          </section>
+          <section class="section-select">
+            <h4>運搬費</h4>
+            <select class="transport" name="transport">
+              <option hidden>地域をお選びください</option>
+              <option value="運搬費1 2000" data-price="2000">地域1 ¥2,000</option>
+              <option value="運搬費2 3000" data-price="3000">地域2 ¥3,000</option>
+              <option value="運搬費3 4000" data-price="4000">地域3 ¥4,000</option>
+            </select>
+          </section>
+        </div>
+      </div>
+    </section>
+    <section class="calc">
+      <p>計算結果の表示</p>
+      <form class="" method="">
+        <input type="text" class="result" name="result" size="30" disabled="disabled" />
+        <input type="reset" name="reset" class="btn" value="リセット" tabindex="4" />
+      </form>
+    </section> -->
+
+    <p>資本金</p>
+    <select name="sihon" class="td_input_select" dir="rtl" id="select">
+      <option value="" selected="">選択してください▼</option>
+      <option value="100000000">1億円以下</option>
+      <option value="10000000">1,000万円以下</option>
+      <option value="1000000">1,00万円以下</option>
+    </select>
+
+    <p>役員報酬支給前の法人利益（年間）</p>
+    <input type="text" id="houzinrieki" name="houzinrieki" />
+
+    <p>役員1人目</p>
+    <p>年間の役員報酬</p>
+    <input type="text" id="yakuinhoushu" name="yakuinhoushu" />
+
+    <p>社会保険の加入の有無</p>
+    <select name="shaho" class="shaho" id="shaho">
+      <option value="" selected="">選択してください▼</option>
+      <option value="mikanyu">未加入</option>
+      <option value="kanyu">加入</option>
+    </select>
+
+    <p>勤務先の年間給与</p>
+    <input type="text" id="kyuuyo" name="kyuuyo" />
+
+    <p>個人事業主の年間事業利益</p>
+    <input type="text" id="nenkanrieki" name="nenkanrieki" />
+    <br />
+    <br />
+    <button id="keisan">計算する</button>
+
+    <p class="p-card_content">答えは<span id="result01" class="p-span_result"></span>です</p>
+    <div id="selectValue" style="display: block"></div>
+    <script src="../js/index.js"></script>
+  </body>
+</html>
